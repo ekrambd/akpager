@@ -29,6 +29,20 @@ class MenuTableSeeder extends Seeder
             $menu->save();
         }
 
+        $homePage = MenuItem::firstOrNew([
+            'menu_id' => $menu->id,
+            'title'   => __('MultiPage'),
+        ]);
+        if (!$homePage->exists) {
+            $homePage->fill([
+                'target'     => '_self',
+                'icon_class' => '',
+                'parent_id'  => null,
+                'order'      => 1,
+                'url'        => '#',
+            ])->save();
+        }
+
 
         $multiPage = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
@@ -38,7 +52,7 @@ class MenuTableSeeder extends Seeder
             $multiPage->fill([
                 'target'     => '_self',
                 'icon_class' => '',
-                'parent_id'  => null,
+                'parent_id'  => $homePage->id,
                 'order'      => 1,
                 'url'        => '#',
             ])->save();
@@ -58,6 +72,20 @@ class MenuTableSeeder extends Seeder
             ])->save();
         }
 
+        $menuItem = MenuItem::firstOrNew([
+            'menu_id' => $menu->id,
+            'title'   => __('L'),
+        ]);
+        if (!$menuItem->exists) {
+            $menuItem->fill([
+                'target'     => '_self',
+                'icon_class' => '',
+                'parent_id'  => $multiPage->id,
+                'order'      => 2,
+                'url'        => '/index-2',
+            ])->save();
+        }
+
 
         $menuItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
@@ -67,7 +95,7 @@ class MenuTableSeeder extends Seeder
             $menuItem->fill([
                 'target'     => '_self',
                 'icon_class' => '',
-                'parent_id'  => null,
+                'parent_id'  => $homePage->id,
                 'order'      => 2,
                 'url'        => '#',
             ])->save();
