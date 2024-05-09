@@ -2,4 +2,5 @@
 
 | complete at   | priority   | task name      |
 | ------------- |-------------|------------- |
-|               | *            | services page|
+|               |             | services page|
+|               | *            | blog, post, tags, categories, category|

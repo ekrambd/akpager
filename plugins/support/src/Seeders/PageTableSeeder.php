@@ -86,10 +86,10 @@ class PageTableSeeder extends Seeder
 
         if (env('APP_DEMO')) {
             $data[] = [
-                'title' => 'Home 2 | Wokoya Laravel CMS',
-                'slug' => 'home-2',
-                'summary' => 'Wokoya Laravel CMS',
-                'layout' => 'theme::layouts.home-2',
+                'title' => 'services',
+                'slug' => 'services',
+                'summary' => 'services',
+                'layout' => 'theme::layouts.services',
                 'content' => '',
             ];
             $data[] = [
