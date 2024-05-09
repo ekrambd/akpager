@@ -15,7 +15,7 @@
                 <h1 class="page-title" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">Blog Standard</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
                         <li class="breadcrumb-item active">Blog Standard</li>
                     </ol>
                 </nav>

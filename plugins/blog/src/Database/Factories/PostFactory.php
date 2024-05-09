@@ -45,7 +45,7 @@ class PostFactory extends Factory
             // 'content' => implode(PHP_EOL, $this->faker->paragraphs),
             'content' => file_get_contents(__DIR__ . '/content.txt'),
 
-            'featured_image' => asset('themes/wokoya/assets/img/blog/'.Arr::random( [1, 2, 3]).'.png'),
+            'featured_image' => asset('themes/wokoya/assets/img/blog/'.Arr::random( [1, 2]).'.png'),
             'tags' => '',
         ];
     }
