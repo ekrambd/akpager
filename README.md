@@ -1,4 +1,4 @@
 ## task
 
-| complete at      | task name      |
-| ------------- | ------------- |
+| complete at   | priority   | task name      |
+| ------------- |-------------|------------- |
