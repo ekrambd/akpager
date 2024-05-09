@@ -1,0 +1,55 @@
+[29-Feb-2024 09:50:36 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Key 'ASSET_URL' not found in .env file. in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php:199
+Stack trace:
+#0 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(183): Env->set('ASSET_URL', 'http://127.0.0....')
+#1 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(458): Env->update(Array)
+#2 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\pages\information.php(33): _env(Array)
+#3 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\boot.php(87): require('C:\\Users\\Acer\\D...')
+#4 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\install.php(41): get_page_content()
+#5 C:\Users\Acer\Desktop\wokoya\laravel\public\index.php(9): require('C:\\Users\\Acer\\D...')
+#6 C:\Users\Acer\Desktop\wokoya\laravel\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php(16): require_once('C:\\Users\\Acer\\D...')
+#7 {main}
+  thrown in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php on line 199
+[29-Feb-2024 09:55:28 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Key 'ASSET_URL' not found in .env file. in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php:199
+Stack trace:
+#0 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(183): Env->set('ASSET_URL', 'http://127.0.0....')
+#1 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(458): Env->update(Array)
+#2 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\pages\information.php(33): _env(Array)
+#3 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\boot.php(87): require('C:\\Users\\Acer\\D...')
+#4 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\install.php(41): get_page_content()
+#5 C:\Users\Acer\Desktop\wokoya\laravel\public\index.php(9): require('C:\\Users\\Acer\\D...')
+#6 C:\Users\Acer\Desktop\wokoya\laravel\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php(16): require_once('C:\\Users\\Acer\\D...')
+#7 {main}
+  thrown in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php on line 199
+[29-Feb-2024 10:25:19 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Key 'ASSET_URL' not found in .env file. in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php:199
+Stack trace:
+#0 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(183): Env->set('ASSET_URL', 'http://127.0.0....')
+#1 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(458): Env->update(Array)
+#2 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\pages\information.php(33): _env(Array)
+#3 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\boot.php(87): require('C:\\Users\\Acer\\D...')
+#4 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\install.php(41): get_page_content()
+#5 C:\Users\Acer\Desktop\wokoya\laravel\public\index.php(9): require('C:\\Users\\Acer\\D...')
+#6 C:\Users\Acer\Desktop\wokoya\laravel\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php(16): require_once('C:\\Users\\Acer\\D...')
+#7 {main}
+  thrown in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php on line 199
+[05-Mar-2024 05:03:54 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Key 'ASSET_URL' not found in .env file. in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php:199
+Stack trace:
+#0 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(183): Env->set('ASSET_URL', 'http://127.0.0....')
+#1 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(458): Env->update(Array)
+#2 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\pages\information.php(33): _env(Array)
+#3 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\boot.php(87): require('C:\\Users\\Acer\\D...')
+#4 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\install.php(41): get_page_content()
+#5 C:\Users\Acer\Desktop\wokoya\laravel\public\index.php(9): require('C:\\Users\\Acer\\D...')
+#6 C:\Users\Acer\Desktop\wokoya\laravel\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php(16): require_once('C:\\Users\\Acer\\D...')
+#7 {main}
+  thrown in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php on line 199
+[10-Mar-2024 15:39:29 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Key 'ASSET_URL' not found in .env file. in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php:199
+Stack trace:
+#0 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(183): Env->set('ASSET_URL', 'http://127.0.0....')
+#1 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php(458): Env->update(Array)
+#2 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\pages\information.php(33): _env(Array)
+#3 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\boot.php(87): require('C:\\Users\\Acer\\D...')
+#4 C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\install.php(41): get_page_content()
+#5 C:\Users\Acer\Desktop\wokoya\laravel\public\index.php(9): require('C:\\Users\\Acer\\D...')
+#6 C:\Users\Acer\Desktop\wokoya\laravel\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php(16): require_once('C:\\Users\\Acer\\D...')
+#7 {main}
+  thrown in C:\Users\Acer\Desktop\wokoya\laravel\public\install_files\php\env.php on line 199
