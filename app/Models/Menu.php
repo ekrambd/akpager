@@ -123,6 +123,7 @@ class Menu extends Model
         if ($type === '_json') {
             return $items;
         }
+
         return View::make($type, ['items' => $items, 'options' => $options])->render();
     }
 

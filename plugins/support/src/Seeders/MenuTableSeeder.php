@@ -19,6 +19,24 @@ class MenuTableSeeder extends Seeder
         $this->site_menu();
     }
 
+    public function addItem($attributes = []) {
+        $item = MenuItem::firstOrNew([
+            'menu_id' => $attributes['menu_id'],
+            'title'   => __($attributes['title']),
+            'parent_id'  => $attributes['parent_id'],
+        ]);
+        if (!$item->exists) {
+            $item->fill([
+                'target'     => '_self',
+                'icon_class' => '',
+                'order'      => $attributes['order'],
+                'url'        => $attributes['url'],
+            ])->save();
+        }
+
+        return $item->id;
+    }
+
     public function site_menu()
     {
         // create admin menu
@@ -29,50 +47,224 @@ class MenuTableSeeder extends Seeder
             $menu->save();
         }
 
-
-        $multiPage = MenuItem::firstOrNew([
+        $homePageId = $this->addItem([
             'menu_id' => $menu->id,
-            'title'   => __('MultiPage'),
+            'title'   => 'Home',
+            'parent_id'  => null,
+            'order'      => 1,
+            'url'        => '#',
         ]);
-        if (!$multiPage->exists) {
-            $multiPage->fill([
-                'target'     => '_self',
-                'icon_class' => '',
-                'parent_id'  => null,
-                'order'      => 1,
-                'url'        => '#',
-            ])->save();
-        }
 
-        $menuItem = MenuItem::firstOrNew([
+        $multiPageId = $this->addItem([
             'menu_id' => $menu->id,
-            'title'   => __('Business'),
+            'title'   => 'MultiPage',
+            'parent_id'  => $homePageId,
+            'order'      => 1,
+            'url'        => '#',
         ]);
-        if (!$menuItem->exists) {
-            $menuItem->fill([
-                'target'     => '_self',
-                'icon_class' => '',
-                'parent_id'  => $multiPage->id,
-                'order'      => 2,
-                'url'        => '/',
-            ])->save();
-        }
-
-
-        $menuItem = MenuItem::firstOrNew([
+        $this->addItem([
             'menu_id' => $menu->id,
-            'title'   => __('OnePage'),
+            'title'   => 'Business',
+            'parent_id'  => $multiPageId,
+            'order'      => 1,
+            'url'        => '/',
         ]);
-        if (!$menuItem->exists) {
-            $menuItem->fill([
-                'target'     => '_self',
-                'icon_class' => '',
-                'parent_id'  => null,
-                'order'      => 2,
-                'url'        => '#',
-            ])->save();
-        }
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Lead Capture',
+            'parent_id'  => $multiPageId,
+            'order'      => 2,
+            'url'        => '/index2',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Software Landing',
+            'parent_id'  => $multiPageId,
+            'order'      => 3,
+            'url'        => '/index3',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'E-learning',
+            'parent_id'  => $multiPageId,
+            'order'      => 4,
+            'url'        => '/index4',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Saas Landing',
+            'parent_id'  => $multiPageId,
+            'order'      => 5,
+            'url'        => '/index5',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'AI Software',
+            'parent_id'  => $multiPageId,
+            'order'      => 6,
+            'url'        => '/index6',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Website Builder',
+            'parent_id'  => $multiPageId,
+            'order'      => 7,
+            'url'        => '/index7',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Fintech',
+            'parent_id'  => $multiPageId,
+            'order'      => 8,
+            'url'        => '/index8',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Chatbot',
+            'parent_id'  => $multiPageId,
+            'order'      => 9,
+            'url'        => '/index9',
+        ]);
 
+        $onePageId = $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'OnePage',
+            'parent_id'  => $homePageId,
+            'order'      => 1,
+            'url'        => '#',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Business',
+            'parent_id'  => $onePageId,
+            'order'      => 1,
+            'url'        => '/',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Lead Capture',
+            'parent_id'  => $onePageId,
+            'order'      => 2,
+            'url'        => '/index2',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Software Landing',
+            'parent_id'  => $onePageId,
+            'order'      => 3,
+            'url'        => '/index3',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'E-learning',
+            'parent_id'  => $onePageId,
+            'order'      => 4,
+            'url'        => '/index4',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Saas Landing',
+            'parent_id'  => $onePageId,
+            'order'      => 5,
+            'url'        => '/index5',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'AI Software',
+            'parent_id'  => $onePageId,
+            'order'      => 6,
+            'url'        => '/index6',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Website Builder',
+            'parent_id'  => $onePageId,
+            'order'      => 7,
+            'url'        => '/index7',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Fintech',
+            'parent_id'  => $onePageId,
+            'order'      => 8,
+            'url'        => '/index8',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Chatbot',
+            'parent_id'  => $onePageId,
+            'order'      => 9,
+            'url'        => '/index9',
+        ]);
+
+        $pageId = $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Pages',
+            'parent_id'  => null,
+            'order'      => 2,
+            'url'        => '#',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'About',
+            'parent_id'  => $pageId,
+            'order'      => 1,
+            'url'        => '/about',
+        ]);
+
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Services',
+            'parent_id'  => null,
+            'order'      => 3,
+            'url'        => '/services',
+        ]);
+
+        $shopId = $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Shop',
+            'parent_id'  => null,
+            'order'      => 4,
+            'url'        => '#',
+        ]);
+
+        $projectId = $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Projects',
+            'parent_id'  => null,
+            'order'      => 4,
+            'url'        => '#',
+        ]);
+
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Project Grid',
+            'parent_id'  => $projectId,
+            'order'      => 1,
+            'url'        => '/projects',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Project List',
+            'parent_id'  => $projectId,
+            'order'      => 1,
+            'url'        => '/project-list',
+        ]);
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Project Masonry',
+            'parent_id'  => $projectId,
+            'order'      => 1,
+            'url'        => '/project-masonry',
+        ]);
+
+        $this->addItem([
+            'menu_id' => $menu->id,
+            'title'   => 'Blog',
+            'parent_id'  => null,
+            'order'      => 5,
+            'url'        => '/blog',
+        ]);
 
     }
 
