@@ -30,103 +30,49 @@ class MenuTableSeeder extends Seeder
         }
 
 
-        $menuItem = MenuItem::firstOrNew([
+        $multiPage = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
-            'title'   => __('Home'),
+            'title'   => __('MultiPage'),
         ]);
-        if (!$menuItem->exists) {
-            $menuItem->fill([
+        if (!$multiPage->exists) {
+            $multiPage->fill([
                 'target'     => '_self',
-                'icon_class' => 'icofont-home',
+                'icon_class' => '',
                 'parent_id'  => null,
                 'order'      => 1,
-                'url'        => '/#home',
+                'url'        => '#',
             ])->save();
         }
 
         $menuItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
-            'title'   => __('About'),
+            'title'   => __('Business'),
         ]);
         if (!$menuItem->exists) {
             $menuItem->fill([
                 'target'     => '_self',
-                'icon_class' => 'icofont-contact-add',
-                'parent_id'  => null,
+                'icon_class' => '',
+                'parent_id'  => $multiPage->id,
                 'order'      => 2,
-                'url'        => '/#about',
+                'url'        => '/',
             ])->save();
         }
 
-        $menuItem = MenuItem::firstOrNew([
-            'menu_id' => $menu->id,
-            'title'   => __('Service'),
-        ]);
-        if (!$menuItem->exists) {
-            $menuItem->fill([
-                'target'     => '_self',
-                'icon_class' => 'icofont-file-document',
-                'parent_id'  => null,
-                'order'      => 2,
-                'url'        => '/#service',
-            ])->save();
-        }
 
         $menuItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
-            'title'   => __('Works'),
+            'title'   => __('OnePage'),
         ]);
         if (!$menuItem->exists) {
             $menuItem->fill([
                 'target'     => '_self',
-                'icon_class' => 'icofont-briefcase-1',
+                'icon_class' => '',
                 'parent_id'  => null,
                 'order'      => 2,
-                'url'        => '/#work',
+                'url'        => '#',
             ])->save();
         }
 
-        $menuItem = MenuItem::firstOrNew([
-            'menu_id' => $menu->id,
-            'title'   => __('Review'),
-        ]);
-        if (!$menuItem->exists) {
-            $menuItem->fill([
-                'target'     => '_self',
-                'icon_class' => 'icofont-quote-left',
-                'parent_id'  => null,
-                'order'      => 2,
-                'url'        => '/#feed',
-            ])->save();
-        }
-
-        $menuItem = MenuItem::firstOrNew([
-            'menu_id' => $menu->id,
-            'title'   => __('Blog'),
-        ]);
-        if (!$menuItem->exists) {
-            $menuItem->fill([
-                'target'     => '_self',
-                'icon_class' => 'icofont-blogger',
-                'parent_id'  => null,
-                'order'      => 2,
-                'url'        => '/#blog',
-            ])->save();
-        }
-
-        $menuItem = MenuItem::firstOrNew([
-            'menu_id' => $menu->id,
-            'title'   => __('Hello'),
-        ]);
-        if (!$menuItem->exists) {
-            $menuItem->fill([
-                'target'     => '_self',
-                'icon_class' => 'icofont-envelope',
-                'parent_id'  => null,
-                'order'      => 2,
-                'url'        => '/#contact',
-            ])->save();
-        }
 
     }
 
